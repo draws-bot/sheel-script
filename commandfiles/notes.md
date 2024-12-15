@@ -70,6 +70,10 @@ https://github.com/daws-78s/shell-script/blob/main/readme.MD
 
 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---> token
 
+IF U USE THIS COMMAND GITBASH WILL NEVER ASK TOKENS
+
+git config --global credential.helper store
+
 
 
 
