@@ -2,12 +2,25 @@
 
 userid=$(id -u)
 
+VALIDATE(){
+    echo "exit status :$1"
+    echo "what are you doing :$2"
+
+
+}
 if [ $userid -ne 0 ]
 then
-    echo "print you are not in superuser"
+    echo "you are not in superuser"
     exit 1 #manually exit if error occurs
 else
     echo "print you are  in superuser"
 fi         
 
 dnf install mysql -y
+
+VALIDATE $? "installing mysql"  #validate=$1,installing mysql=$2
+
+
+dnf install git -y
+
+VALIDATE $? "installing git"  #validate=$1,installing mysql=$2
