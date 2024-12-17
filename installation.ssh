@@ -4,7 +4,7 @@ userid=$(id -u)
 
 if [ $userid -ne 0 ]
 then
-    echo "print you are in superuser"
+    echo "print you are not in superuser"
 #manually exit if error occurs
 else
     echo "print you are not in superuser"
