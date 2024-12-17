@@ -4,4 +4,4 @@ movies=("RRR" "Djtillu" "pushpa")
 
 echo "first movie : ${movies[0]}"
 echo "second movie :${movies[1]}"
-echo "third movie :${movies[3]}"
+echo "third movie :${movies[2]}"
