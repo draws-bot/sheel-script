@@ -3,7 +3,7 @@
 userid=$(id -u)
 
 VALIDATE(){
-    
+    echo "exit status : $1"
 }
 
 if [ $userid -ne 0 ]
