@@ -1,6 +1,6 @@
 #!/bin/bash
 
-movies =(RRR,Djtillu,pushpa)
+movies =("RRR","Djtillu","pushpa")
 
 echo "first movie : $movie[0]"
 echo "second movie :$movie[1]"
