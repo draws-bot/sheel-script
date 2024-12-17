@@ -1,0 +1,8 @@
+#!/bin/bash/
+
+# declaring a variable
+
+echo "ramesh:hi how are suresh"
+echo "suresh: hi i am fine ramesh ,you"
+echo " i am preparing Devops ,is it good to learn"
+echo "yes now a days devops is booming"
