@@ -3,12 +3,12 @@
 userid=$(id -u)
 
 VALIDATE(){
-    if [ $1 -ne 0 ]
+    if [ $1 -eq 0 ]                   #$1 is about exit status is used to check previous command is succes or not ,we can indentify  only when exit status is 0
     then
-    echo "$2 is failure"
+    echo "$2 is sucess"              #$2=installing mysql is (or) installing git is
     exit 1
     else
-    echo "$2 is success"
+    echo "$2 is failure"
 fi
  
 }
