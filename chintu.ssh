@@ -1,2 +1,4 @@
 $(sudo su)
 dnf install mysql -y
+
+dnf install git -y
