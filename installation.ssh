@@ -1,0 +1,12 @@
+#!/bin/bash
+
+userid= (id -u )
+
+if [ $userid -eq 0 ]
+then
+    echo "print you are in superuser"
+    exit 1 #manually exit if error occurs
+else
+    echo "print you are not in superuser" 
+
+dnf install mysql -y    
