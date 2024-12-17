@@ -3,10 +3,9 @@
 userid=$(id -u)
 
 VALIDATE(){
-
-
-
+    
 }
+
 if [ $userid -ne 0 ]
 then
     echo "you are not in superuser"
