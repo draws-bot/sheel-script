@@ -9,6 +9,7 @@ VALIDATE(){
     if [ $1 -ne 0 ]
     then
     echo "$2 is ..failure"
+    exit 1
     else
     echo "$2 is ..success"
 fi
@@ -26,16 +27,15 @@ fi
 
 for i in $@
 do
-  echo "installing packges :$i"
-  dnf list installed $i 
+  echo "package to install :$i"
+  dnf list installed $i
   if [ $? -eq 0 ]
   then
-  echo "package is already installed :$i ... skipping"
-  exit 1
-  else
-  dnf install $i -y 
-  VALIDATE &? "installing $i"
-fi
+      echo "package is already installed :$i ... skipping"
+  else 
+      dnf install $i -y 
+      VALIDATE &? "installing $i"
+   fi
 done
 
 
