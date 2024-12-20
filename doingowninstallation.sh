@@ -5,10 +5,11 @@ userid=$(id -u)
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo "$2 ...failure"
-        exit 1
-        echo "$2 ....success"
-    fi
+    echo "$2 ...failure"
+    exit 1
+    else
+    echo "$2 ....success"
+fi
 }
 
 if [ $userid -ne 0 ]
