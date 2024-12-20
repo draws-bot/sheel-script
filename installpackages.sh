@@ -24,11 +24,22 @@ then
     echo "you are in superuser"
 fi
 
-dnf install mysql -y 
-VALIDATE $? "installing mysql"
+for i in $@
+do
+  echo "installing packges :$i"
+  dnf list installed $i 
+  if [ $? -eq 0 ]
+  then
+  echo "package is already installed :$i ... skipping"
+  exit 1
+  else
+  dnf install $i -y 
+  VALIDATE &? "installing $i"
 
-dnf install git -y 
-VALIDATE $? "installing git"
+
+
+
+
 
 
 
