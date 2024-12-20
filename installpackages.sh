@@ -46,6 +46,29 @@ do
 done
 
 
+#how to check in linux is command exit status ;
+
+
+#[ ec2-user@ip-172-31-94-96 ~/sheel-script ]$ sudo dnf list installed mysql
+#Installed Packages
+#mysql.x86_64                                                                    8.0.36-1.el9_3                                                                    @rhel-9-appstream-rhui-rpms
+
+
+#[ ec2-user@ip-172-31-94-96 ~/sheel-script ]$ echo $?
+#0
+
+#packages is not installed
+
+
+#[ ec2-user@ip-172-31-94-96 ~/sheel-script ]$ sudo dnf list installed mysql
+#Error: No matching Packages to list
+
+
+#[ ec2-user@ip-172-31-94-96 ~/sheel-script ]$ echo $?
+#1
+
+
+
 
 
 
