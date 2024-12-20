@@ -16,7 +16,7 @@ fi
 
 }
 
-if [ userid -ne 0 ]
+if [ $userid -ne 0 ]
 then
     echo "you are not in superuser"
     exit 1
