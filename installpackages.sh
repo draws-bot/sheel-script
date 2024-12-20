@@ -35,6 +35,8 @@ do
   else
   dnf install $i -y 
   VALIDATE &? "installing $i"
+fi
+done
 
 
 
