@@ -3,7 +3,12 @@
 userid=$(id -u)
 
 VALIDATE(){
-    echo "exit status : $1"
+    if [ $1 -ne 0 ]
+    then
+        echo "$2 ...failure"
+        exit 1
+        echo "$2 ....success"
+    fi
 }
 
 if [ $userid -ne 0 ]
@@ -16,9 +21,9 @@ fi
 
 dnf install mysql -y
 
-VALIDATE $?   #validate=$1,installing mysql=$2
+VALIDATE $?  "installing mysql"        #validate=$1,installing mysql=$2
 
 
 dnf install git -y
 
-VALIDATE $?     #validate=$1,installing mysql=$2
+VALIDATE $?    "installing git "       #validate=$1,installing mysql=$2
