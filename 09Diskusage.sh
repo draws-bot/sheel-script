@@ -12,6 +12,6 @@ do
   if [ $USAGE -ge $DISK_THERSHOULD ]
   
   then
-  echo "$FOLDER is greater than $DISK_THERSHOULD, CURRENT USAGE=$usage"
+  echo "$FOLDER is greater than $DISK_THERSHOULD, CURRENT USAGE=$USAGE"
   fi
 done <<< $DISK_USAGE
