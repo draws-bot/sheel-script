@@ -10,3 +10,19 @@ echo "hostname :$HOSTNAME"
 echo "process id of shell script :$$"
 echo "process id of background: $!"
 echo "To check the exit status of previous command:$?"
+
+
+
+
+
+#[ ec2-user@ip-172-31-16-132 ~/sheel-script ]$ sh 06variable.ssh  swathi chintu sai venky vanaja
+#all variable : swathi chintu sai venky vanaja
+#number of variables passed : 5
+#script name : 06variable.ssh
+#current working directory :/home/ec2-user/sheel-script
+#home directory of current user :/home/ec2-user
+#which user running this script : ec2-user
+#hostname :ip-172-31-16-132.ec2.internal
+#process id of shell script :2132
+#process id of background:
+#To check the exit status of previous command:0

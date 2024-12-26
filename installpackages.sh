@@ -19,7 +19,7 @@ VALIDATE(){
     exit 1
     else
     echo "$2 is ..success"
-fi
+    fi
     
 
 }
@@ -28,7 +28,7 @@ if [ $userid -ne 0 ]
 then
     echo "you are not in superuser"
     exit 1
-    else 
+else 
     echo "you are in superuser"
 fi
 
@@ -41,7 +41,7 @@ do
       echo "package is already installed :$i ... skipping"
   else 
       dnf install $i -y &>>LOGFILE
-      VALIDATE &? "installing $i"       #validate $1 "validate $?" $2 "is installing $i"
+      VALIDATE $? "installing $i"       #validate $1 "validate $?" $2 "is installing $i"
    fi
 done
 
