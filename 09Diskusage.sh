@@ -1,10 +1,6 @@
 #!/bin/bash
 
-handle_error(){
-    echo "Error occured at line number: $1, error command: $2"
-}
 
-trap 'handle_error ${LINENO} "$BASH_COMMAND"' ERR
 
 DISK_USAGE=$(df -hT | grep xfs)
 DISK_THERSHOULD=6
