@@ -4,7 +4,7 @@ SOURCE_DIRECTORY=/tmp/app-log/
 
 if [ -d $SOURCE_DIRECTORY ]
 then
-    echo "$SOURCE_DIRECTORY is exists"
+    echo "$SOURCE_DIRECTORY source_directory is exists"
 else
     echo "$SOURCE_DIRECTORY make sure it should exists"
     exit 1
