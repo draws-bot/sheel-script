@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DISK_USAGE=$(dnf -hT | grep xfs)
+DISK_USAGE=$(df -hT | grep xfs)
 DISK_THERSHOULD=6
 
 while IFS= read -r line
