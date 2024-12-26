@@ -18,4 +18,4 @@ do
   then
   echo "$FOLDER is greater than $DISK_THERSHOULD, CURRENT USAGE=$usage"
   fi
-done <<< DISK_USAGE
+done <<< $DISK_USAGE
