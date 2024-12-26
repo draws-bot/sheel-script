@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 DISK_USAGE=$(df -hT | grep xfs)
 DISK_THERSHOULD=6
 
@@ -12,4 +14,4 @@ do
   then
   echo "$FOLDER is greater than $DISK_THERSHOULD, CURRENT USAGE=$usage"
   fi
-done <<< $DISK_USAGE
+done <<< DISK_USAGE
