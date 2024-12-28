@@ -12,7 +12,6 @@ do
   USAGE=$(echo $line | awk -F " " '{print $3F}')
   FOLDER=$(echo $line | awk -F " " '{print $1F}')
   if [ $USAGE -ge $DISK_THERSHOULD ]
-  
   then
   echo "$FOLDER is greater than $DISK_THERSHOULD, CURRENT USAGE=$USAGE"
   fi
