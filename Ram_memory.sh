@@ -2,15 +2,15 @@
 
 
 
-DISK_USAGE=$(df -hT | grep xfs)
-DISK_THERSHOULD=6
+DISK_USAGE=$(free -m)
+DISK_THERSHOULD=200
 
 #xfs storage all lines will come to read this lines we use while loop 
 
 while IFS= read -r line
 do
-  USAGE=$(echo $line | awk -F " " '{print $6F}' | cut -d "%" -f1)
-  FOLDER=$(echo $line | awk -F " " '{print $NF}')
+  USAGE=$(echo $line | awk -F " " '{print $3F}')
+  FOLDER=$(echo $line | awk -F " " '{print $1F}')
   if [ $USAGE -ge $DISK_THERSHOULD ]
   
   then
