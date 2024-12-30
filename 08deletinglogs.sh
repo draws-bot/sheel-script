@@ -12,7 +12,7 @@ fi
 
 FILES=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +14)
 
-while IFS= read -r line   #WHAT IT IS READING $FILES THAT WHY DONE <<< $FILES
+while IFS= read -r line                                                        #WHAT IT IS READING $FILES THAT WHY DONE <<< $FILES
 do
   echo "deleting files :$line"
   rm -rf $line
