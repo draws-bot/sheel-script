@@ -11,6 +11,8 @@ else
 fi
 
 FILES=$(find $SOURCE_DIRECTORY -name "*.txt")
+number_of_lines=wc --lines < $FILES
+number_of_words=wc --word < $FILES
 
 while IFS= read -r line                                                        #WHAT IT IS READING $FILES THAT WHY DONE <<< $FILES
 do
