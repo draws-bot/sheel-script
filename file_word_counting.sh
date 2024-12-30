@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SOURCE_DIRECTORY=/home/ec2-user
+SOURCE_DIRECTORY=/home/ec2-user/swathi.txt
 
 if [ -d $SOURCE_DIRECTORY ]
 then
@@ -10,12 +10,10 @@ else
     exit 1
 fi
 
-FILES=$(find $SOURCE_DIRECTORY -name "*.txt")
-#number_of_lines=wc --lines < $FILES
-#number_of_words=wc --word < $FILES
+FILES=$(find $SOURCE_DIRECTORY -name)
 
-while IFS= read -r line                                                        #WHAT IT IS READING $FILES THAT WHY DONE <<< $FILES
-do
-  echo "number_of_lines=$(wc --lines < $line)"
-  echo "number_of_words=$(wc --word < $line)"
-done <<< $FILES
+#while IFS= read -r line                                                        #WHAT IT IS READING $FILES THAT WHY DONE <<< $FILES
+#do
+#  echo "number_of_lines=$(wc --lines < $line)"
+#  echo "number_of_words=$(wc --word < $line)"
+#done <<< $FILES
