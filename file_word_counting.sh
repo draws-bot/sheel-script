@@ -16,8 +16,6 @@ number_of_words=wc --word < $FILES
 
 while IFS= read -r line                                                        #WHAT IT IS READING $FILES THAT WHY DONE <<< $FILES
 do
-  "number_of_lines=wc --lines < $line"
-  "number_of_words=wc --word < $line"
   echo "Number of lines: $number_of_lines"
   echo "Number of words: $number_of_words"
 done <<< $FILES
