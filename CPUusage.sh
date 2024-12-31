@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CPU_USAGE=$(ps -eo pid,ppid,%mem,%cpu,cmd --sort=-%mem | head -n 8)
-CPU_THERSHOULD=1.0
+CPU_THERSHOULD=1
 
 
 while IFS= read -r line
