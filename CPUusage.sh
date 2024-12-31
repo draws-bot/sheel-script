@@ -6,7 +6,7 @@ CPU_THERSHOULD=1.5
 
 while IFS= read -r line
 do
-  USAGE=$(echo $line | awk -F " " '{print $3F}' | cut -d "%" -f1)
+  USAGE=$(echo $line | awk -F " " '{print $3F}' )
   FOLDER=$(echo $line | awk -F " " '{print $5F}')
   if [ $USAGE -ge $CPU_THERSHOULD ]
   then
