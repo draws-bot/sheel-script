@@ -8,7 +8,7 @@ while IFS= read -r line
 do
   USAGE=$(echo $line | awk -F " " '{print $3F}' )
   FOLDER=$(echo $line | awk -F " " '{print $5F}')
-  if [ $USAGE -ge 1.0 ]
+  if [ $USAGE -eq $CPU_THERSHOULD ]
   then
   echo "$FOLDER is greater than $CPU_THERSHOULD, CURRENT USAGE=$USAGE"
   fi
