@@ -10,6 +10,7 @@ do
   if [ $USAGE -ge $CPU_THERSHOULD ]
   then
   echo "$FOLDER is greater than $CPU_THERSHOULD, CURRENT USAGE=$USAGE"
+  fi
 done <<< $CPU_USAGE
 
 
