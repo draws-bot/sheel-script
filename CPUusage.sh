@@ -1,11 +1,15 @@
 #!/bin/bash
 
-CPU_USAGE=$(ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head -n 6)
+CPU_USAGE=$(ps -eo pid,ppid,%mem,%cpu,cmd --sort=-%mem | head -n 8)
 CPU_THERSHOULD=1.0
 
 while IFS= read -r is line 
 do
-  echo "this are the top five cpu consuming :$line"
+  USAGE=$(echo $line | awk -F " " '{print 3F}')
+  FOLDER=$(echo $line | awk -F " " '{print 5F}')
+  if [ $USAGE -ge $CPU_THERSHOULD ]
+  then
+  echo "$FOLDER is greater than $CPU_THERSHOULD, CURRENT USAGE=$USAGE"
 done <<< $CPU_USAGE
 
 
