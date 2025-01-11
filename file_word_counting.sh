@@ -15,6 +15,6 @@ FILES=$(find $SOURCE_DIRECTORY -name "*.txt")
 while IFS= read -r line                                                        #WHAT IT IS READING $FILES THAT WHY DONE <<< $FILES
 do
   echo "file_name=$line"
-  echo "number_of_lines=$(wc --lines < $line)"                                      # to open the text file that that why we are writing here {--line < $line} remeber this ...
+  echo "number_of_lines=$(wc --lines < $line | grep -o -i "[aeiou]")"                                      # to open the text file that that why we are writing here {--line < $line} remeber this ...
   echo "number_of_words=$(wc --word < $line)"
 done <<< $FILES
