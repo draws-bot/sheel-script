@@ -16,5 +16,6 @@ while IFS= read -r line                                                        #
 do
   echo "file_name=$line"
   echo "number_of_lines=$(wc --lines < $line)"
+  echo "vowCount=$(echo $string | grep -o -i "[aeiou]" | wc --lines)"         #it will give vowels in a string...
   echo "number_of_words=$(wc --word < $line)"
 done <<< $FILES
