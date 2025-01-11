@@ -20,4 +20,8 @@ read string
 
 numCount=$(echo $string | grep -o "[0-9]" | wc --lines)
 vowCount=$(echo $string | grep -o -i "[aeiou]" | wc --lines)
+
+
+
+echo "The given string has $vowCount vowels, $numCount numbers in it."
  
