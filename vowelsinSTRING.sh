@@ -1,22 +1,22 @@
 #!/bin/bash
 
-userid= $(id -u)
+userid=$(id -u)
+
 
 
 if [ $userid -ne 0 ]
 then
     echo "you are not in superuser"
+    exit 1 #manually exit if error occurs
 else
-    echo "you are in superuser"
-fi
+    echo "print you are  in superuser"
+fi         
 
-
-# cat for_vowels.sh
 
 
 
 read  "Enter something"
-if [ $char -eq [AEIOUaeiou]* ]; 
+if [ $char -eq [AEIOUaeiou] ]; 
 then
     echo "vowel"
 else
