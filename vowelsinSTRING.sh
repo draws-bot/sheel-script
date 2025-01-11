@@ -14,8 +14,8 @@ fi
 
 
 
-echo "enter something"
-read  "char"
+
+read -p "Enter something: " char
 if [[ "$char" == *[AEIOUaeiou]* ]]; then
     echo "vowel"
 else
