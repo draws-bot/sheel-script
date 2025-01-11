@@ -14,11 +14,11 @@ fi
 
 
 
-
-read  "Enter something"
-if [ $char -eq [AEIOUaeiou] ]; 
-then
+echo "enter something"
+read  "char"
+if [[ "$char" == *[AEIOUaeiou]* ]]; then
     echo "vowel"
 else
     echo "consonant"
-fi  
+fi 
+ 
