@@ -1,6 +1,6 @@
 #!/bin/bash
 
-userid=$(id -u)
+userid=$(id -u)                # id -u gives u are in super user are not 
 
 VALIDATE(){
     if [ $1 -ne 0 ]

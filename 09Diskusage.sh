@@ -16,3 +16,12 @@ do
   echo "$FOLDER is greater than $DISK_THERSHOULD, CURRENT USAGE=$USAGE"
   fi
 done <<< $DISK_USAGE
+
+
+
+##wgile IFS= read -r line 
+#do
+
+##expression
+
+##done <<< name
