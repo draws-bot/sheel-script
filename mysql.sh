@@ -3,7 +3,7 @@
 
 
 
-userid=$(id -u)
+#userid=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
@@ -24,13 +24,13 @@ fi
 }
 
 
-if [ $userid -ne 0 ]
-then
-    echo "you are not in superuser"
-    exit 1
-    else 
-    echo "you are in superuser"
-fi
+#if [ $userid -ne 0 ]
+#then
+#    echo "you are not in superuser"
+#    exit 1
+#    else 
+#    echo "you are in superuser"
+#fi
 
 sudo dnf install mysql-server -y
 
