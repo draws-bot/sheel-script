@@ -32,7 +32,7 @@ then
     echo "you are in superuser"
 fi
 
-dnf install mysql-server -y
+sudo dnf install mysql-server -y
 
 VALIDATE $?  "installing mysql"
 
