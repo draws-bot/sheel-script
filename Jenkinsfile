@@ -22,6 +22,7 @@ pipeline {
                 sh """
                 sh 06variable.ssh
                 sh 09Diskusage.sh
+                sh mysql.sh
                 """
             }
         }
