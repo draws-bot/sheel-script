@@ -22,7 +22,7 @@ pipeline {
                 sh """
                 sh 06variable.ssh
                 sh 09Diskusage.sh
-                sudo su -
+                sudo su
                 sh mysql.sh
                 """
             }
