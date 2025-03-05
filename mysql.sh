@@ -36,12 +36,12 @@ sudo dnf install mysql-server -y
 
 VALIDATE $?  "installing mysql"
 
-systemctl enable mysqld
+sudo systemctl enable mysqld
 
 VALIDATE $?  "enabling mysql"
 
 
-systemctl start mysqld
+sudo systemctl start mysqld
 
 
 VALIDATE $?  "starting mysql"
