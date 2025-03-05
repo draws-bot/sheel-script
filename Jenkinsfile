@@ -21,6 +21,7 @@ pipeline {
             steps {
                 sh """
                 sh 06variable.ssh
+                sh 09Diskusage.sh
                 """
             }
         }
