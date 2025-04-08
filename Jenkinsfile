@@ -22,6 +22,7 @@ pipeline {
                 sh """
                 sh 06variable.ssh
                 sh 09Diskusage.sh
+                sh hello-word.ssh
                 """
             }
         }
@@ -29,6 +30,7 @@ pipeline {
     post { 
         always { 
             echo 'I will always say Hello again!'
+            deleteDir()                                                                                ##means it will delete all directories##
         }
         success { 
             echo 'I will run when pipeline is success'
