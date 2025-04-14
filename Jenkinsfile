@@ -14,16 +14,16 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'echo this is test'
-            }
-        }
-        stage('Deploy') {
-            steps {
                 sh """
                 sh 06variable.ssh
                 sh 09Diskusage.sh
                 sh hello-word.ssh
                 """
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'echo this is deploy'
             }
         }
     }
