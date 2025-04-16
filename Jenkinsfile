@@ -23,6 +23,7 @@ pipeline {
                 sh """
                 sh 06variable.ssh
                 sh 09Diskusage.sh
+                sudo sh hello-word.ssh
                 """
             }
         }
