@@ -14,6 +14,12 @@ pipeline {
         }
         stage('Test') {
             steps {
+                sh 'echo this is test'
+
+            }
+        }
+        stage('Deploy') {
+            steps {
                 sh """
                 sh 06variable.ssh
                 sh 09Diskusage.sh
@@ -21,16 +27,11 @@ pipeline {
                 """
             }
         }
-        stage('Deploy') {
-            steps {
-                sh 'echo this is deploy'
-            }
-        }
     }
     post { 
         always { 
             echo 'I will always say Hello again!'
-          //  deleteDir()                                                                           
+           // deleteDir()                                                                           
         }
         success { 
             echo 'I will run when pipeline is success'
