@@ -1,6 +1,6 @@
 #!/bin/bash
 
 
-x=mississipi
+x=mississipisansaiswa
 
 grep -o "s" <<< "$x" | wc -l
