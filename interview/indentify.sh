@@ -3,4 +3,4 @@
 
 x=mississipisansaiswa
 
-grep -o "s" <<< "$x" | wc -l
+grep -o "s" < "$x" | wc -l
