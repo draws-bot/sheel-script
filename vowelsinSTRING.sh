@@ -19,9 +19,9 @@ echo "Enter a line of text"
 read string
 
 numCount=$(echo  grep -o "[0-9]" <<< $string | wc --lines)
-vowCount=$(echo  grep -o  "[aeiou]" <<< $string | wc --lines)
+vowCount=$(echo  grep -o  -i "[aeiou]" <<< $string | wc --lines)
 #vowCount=$(echo $string | grep -o -i "[AEIOUaeiou]" | wc --lines)
-consCount=$(echo  grep -o  "[bcdfghjklmnpqrstvwxyz]" <<< $string | wc --lines)
+consCount=$(echo  grep -o  -i "[bcdfghjklmnpqrstvwxyz]" <<< $string | wc --lines)
 
 echo "The given string has $vowCount vowels, $consCount consonants and $numCount numbers in it."
 
