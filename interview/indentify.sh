@@ -1,10 +1,6 @@
 #!/bin/bash
 
 
+i= mississipi
 
-
-for i in $@
-do
-    echo "indetify repeating name=grep -o "s" <<< "$i" | wc -l"
-done
-
+grep -o "s" <<< $i | wc -l
