@@ -3,4 +3,4 @@
 
 i= mississipi
 
-grep -o "s" <<< $i | wc -l
+grep -o "s" <<< "$i" | wc -l
