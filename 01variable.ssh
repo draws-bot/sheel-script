@@ -7,5 +7,15 @@ echo "suresh: hi i am fine ramesh ,you"
 echo " ramesh:i am preparing Devops ,is it good to learn"
 echo "suresh:yes now a days devops is booming"
 
+#!/bin/bash
 
+SOURCE_DIRECTORY=/home/ec2-user/
+
+FILES= $(find $SOURCE_DIRECTORY -name "*.txt")
+
+while IFS= read -r line
+do 
+  echo "number of words= $(wc --line < $line)"
+  echo "number of lines=$(wc --words < $line)"
+done <<< $FILEs
 
