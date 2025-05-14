@@ -3,4 +3,7 @@
 
 x=mississipisansaiswa
 
-grep -o "s" <<< "$x" | wc -l
+#grep -o "s" <<< "$x" | wc -l
+
+
+indentify=$(echo $x |grep -o "s"  | wc --lines)
