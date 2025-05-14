@@ -16,12 +16,12 @@ fi
 
 
 echo "Enter a line of text"
-read string
+read x
 
-numCount=$(echo $string | grep -o "[0-9]" | wc --lines)
-vowCount=$(echo $string | grep -o -i "[aeiou]" | wc --lines)
-#vowCount=$(echo $string | grep -o -i "[AEIOUaeiou]" | wc --lines)
-consCount=$(echo $string | grep -o -i "[bcdfghjklmnpqrstvwxyz]" | wc --lines)
+numCount=$(echo $x | grep -o "[0-9]" | wc --lines)
+vowCount=$(echo $x | grep -o -i "[aeiou]" | wc --lines)
+#vowCount=$(echo $x | grep -o -i "[AEIOUaeiou]" | wc --lines)
+consCount=$(echo $x | grep -o -i "[bcdfghjklmnpqrstvwxyz]" | wc --lines)
 
 echo "The given string has $vowCount vowels, $consCount consonants and $numCount numbers in it."
 
