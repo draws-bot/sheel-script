@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-x=mississipisansaiswa
+read x
 
 #grep -o "s" <<< "$x" | wc -l
 
